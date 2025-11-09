@@ -44,7 +44,9 @@
     .sol-item{padding:12px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent)}
 
     footer{margin-top:26px;display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:13px}
-
+.video{
+  margin-top: 5vh;
+}
     @media (max-width:900px){
       .hero, main{grid-template-columns:1fr;}
       .hero{grid-auto-rows:auto}
@@ -74,7 +76,10 @@
         <a href="#act" class="badge">Take Action</a>
       </nav>
     </header>
-
+<video width="640" height="360" controls class="video">
+  <source src="macion.mp4" type="video/mp4" >
+  Your browser does not support the video tag.
+</video>
     <div class="hero">
       <div class="card">
         <div class="kicker">Overview</div>
