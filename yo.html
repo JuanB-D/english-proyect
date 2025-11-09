@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>About Me</title>
+    <style>
+        :root {
+            --bg: #0f1724;
+            --card: #0b1220;
+            --accent: #46c0b6;
+            --muted: #98a2b3;
+            --glass: rgba(255, 255, 255, 0.04);
+            --radius: 16px;
+            --maxw: 1100px;
+            color-scheme: dark;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+            margin: 0;
+            background: linear-gradient(180deg, #071029 0%, #071826 60%);
+            color: #e6eef6;
+            -webkit-font-smoothing: antialiased
+        }
+
+        .wrap {
+            max-width: var(--maxw);
+            margin: 48px auto;
+            padding: 28px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent);
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(2, 6, 23, 0.6);
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 14px
+        }
+
+        .logo {
+            width: 56px;
+            height: 56px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, var(--accent), #2b9fa9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: #042027;
+            cursor: pointer
+        }
+
+        h1 {
+            font-size: clamp(20px, 3.6vw, 34px);
+            margin: 0
+        }
+
+        p.lead {
+            color: var(--muted);
+            margin: 6px 0 0
+        }
+
+        nav {
+            display: flex;
+            gap: 12px
+        }
+
+        nav a {
+            color: var(--muted);
+            text-decoration: none;
+            padding: 8px 12px;
+            border-radius: 10px
+        }
+
+        nav a:hover {
+            color: #fff;
+            background: var(--glass)
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 340px;
+            gap: 22px;
+            margin-top: 26px
+        }
+
+        .card {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+            padding: 22px;
+            border-radius: var(--radius);
+            backdrop-filter: blur(6px);
+        }
+
+        .text {
+            color: #cfe7ef;
+            line-height: 1.6
+        }
+
+        footer {
+            margin-top: 26px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--muted);
+            font-size: 13px
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 10px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.02);
+            font-weight: 600
+        }
+
+        @media (max-width:900px) {
+            .hero {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <div class="brand">
+                <div class="logo" onclick="window.location.href = './index.html'"><img src="./maicol.jpg" alt=""
+                        width="60vh"></div>
+                <div>
+                    <h1>Maicol Andres Largo</h1>
+                </div>
+            </div>
+            <nav>
+                <a href="./index.html">Home</a>
+                <a href="./yo.html" class="badge" style="color:#fff;">Student</a>
+            </nav>
+        </header>
+
+        <div class="hero">
+            <div class="card">
+                <div class="kicker" style="color:var(--accent);font-weight:600;font-size:13px">Profile</div>
+                <p class="text">
+                    This blog was created with the purpose of raising awareness about environmental damage and promoting real change through education. 
+                    Here you will find clear, current, and reflective information about how our daily actions affect the planet and what we can do to reduce that impact.
+                </p>
+
+                <div style="margin-top:18px">
+                    <h4 style="margin:0 0 6px">Socials & Contact</h4>
+                    <div style="display:flex;gap:10px;flex-wrap:wrap">
+                        <a href="#" style="color:var(--accent);text-decoration:none">🌐 Personal Website</a>
+                    </div>
+                </div>
+            </div>
+
+            <aside class="card">
+                <h3 style="margin:0">Team</h3>
+                <ul class="text" style="margin-top:10px;list-style:circle;padding-left:20px">
+                    <li>English Teacher: Javier</li>
+                    <li>Maicol Andres Largo</li>
+                </ul>
+
+                <h3 style="margin-top:20px">Objectives</h3>
+                <ul class="text" style="margin-top:10px;list-style:circle;padding-left:20px">
+                    <li>Provide a clearer vision of the environment</li>
+                    <li>Encourage people to protect the planet</li>
+                    <li>Learn English</li>
+                </ul>
+            </aside>
+        </div>
+
+        <main style="margin-top:24px">
+            <section class="card">
+                <div class="kicker" style="color:var(--accent);font-weight:600;font-size:13px">Vision</div>
+                <h3>What the page contains</h3>
+                <p class="text">
+                    It contains a collection of information about the damage caused by humans to the environment and some ways to prevent it.
+                </p>
+            </section>
+
+            <section class="card" style="margin-top:16px">
+                <div class="kicker" style="color:var(--accent);font-weight:600;font-size:13px">Personal Goal</div>
+                <h3>Inspire other students</h3>
+                <p class="text">
+                    My goal is for this blog to be a source of learning and motivation, so that other young people can find inspiration to create projects that bring real and sustainable solutions to their communities.
+                </p>
+            </section>
+        </main>
+
+        <footer>
+            <div>© 2025 — Personal project by Maicol Andres Largo</div>
+            <div>Design consistent with EcoBlog</div>
+        </footer>
+    </div>
+</body>
+
+</html>

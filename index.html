@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Environmental Damage — Learn and Act</title>
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --accent:#46c0b6; --muted:#98a2b3; --glass:rgba(255,255,255,0.04);
+      --radius:16px; --maxw:1100px;
+      color-scheme: dark;
+    }
+    *{box-sizing:border-box}
+    body{font-family:Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; background:linear-gradient(180deg,#071029 0%, #071826 60%); color:#e6eef6; -webkit-font-smoothing:antialiased}
+    .wrap{max-width:var(--maxw); margin:48px auto; padding:28px; background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent); border-radius:20px; box-shadow:0 8px 30px rgba(2,6,23,0.6);}
+
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#2b9fa9);display:flex;align-items:center;justify-content:center;font-weight:700;color:#042027}
+    h1{font-size:clamp(20px,3.6vw,34px);margin:0}
+    p.lead{color:var(--muted);margin:6px 0 0}
+
+    nav{display:flex;gap:12px}
+    nav a{color:var(--muted);text-decoration:none;padding:8px 12px;border-radius:10px}
+    nav a:hover{color:#fff;background:var(--glass)}
+
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:22px;margin-top:26px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:20px;border-radius:var(--radius);backdrop-filter:blur(6px);}
+    .stats{display:flex;gap:12px;flex-wrap:wrap}
+    .stat{flex:1;min-width:110px;padding:14px;background:linear-gradient(90deg, rgba(255,255,255,0.02), transparent);border-radius:12px}
+    .stat h3{margin:0;font-size:20px}
+    .stat p{margin:6px 0 0;color:var(--muted);font-size:13px}
+
+    main{display:grid;grid-template-columns:1fr 320px;gap:22px;margin-top:24px}
+    section{margin-bottom:18px}
+
+    .section-title{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+    .kicker{font-size:13px;color:var(--accent);font-weight:600}
+    .text{color:#cfe7ef;line-height:1.6}
+
+    .right-col .card{position:sticky;top:28px}
+
+    .cards-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .sol-item{padding:12px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent)}
+
+    footer{margin-top:26px;display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:13px}
+
+    @media (max-width:900px){
+      .hero, main{grid-template-columns:1fr;}
+      .hero{grid-auto-rows:auto}
+      .right-col{order:2}
+    }
+
+    .cta{display:inline-block;padding:10px 16px;border-radius:12px;background:linear-gradient(90deg,var(--accent),#1aa7a0);color:#042027;font-weight:700;text-decoration:none}
+
+    .badge{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.02);font-weight:600}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo" onclick="window.location.href = './yo.html'" style="cursor: pointer;"><img src="./maicol.jpg" alt="" style="width: 9vh;"></div>
+        <div>
+          <h1>Environmental Damage</h1>
+          <p class="lead">Causes, effects, and real actions to protect our planet.</p>
+        </div>
+      </div>
+      <nav>
+        <a href="#problem">Problem</a>
+        <a href="#causes">Causes</a>
+        <a href="#effects">Effects</a>
+        <a href="#solutions">Solutions</a>
+        <a href="#act" class="badge">Take Action</a>
+      </nav>
+    </header>
+
+    <div class="hero">
+      <div class="card">
+        <div class="kicker">Overview</div>
+        <h2 style="margin-top:6px">What is environmental damage?</h2>
+        <p class="text">Environmental damage refers to the deterioration of the natural environment caused by human activities or natural events that alter ecosystems, reduce biodiversity, and harm human health. Here you'll find clear information, data, and practical steps to take action.</p>
+
+        <div style="margin-top:16px" class="stats">
+          <div class="stat">
+            <h3>+1M</h3>
+            <p>Species at risk (estimated)</p>
+          </div>
+          <div class="stat">
+            <h3>+2°C</h3>
+            <p>Global temperature rise (historical average)</p>
+          </div>
+          <div class="stat">
+            <h3>8M</h3>
+            <p>Tons of plastic dumped into oceans yearly</p>
+          </div>
+        </div>
+      </div>
+
+      <aside class="right-col">
+        <div class="card">
+          <h3 style="margin:0">How you can help</h3>
+          <p class="text" style="margin-top:8px">Small actions matter: reduce plastic, walk or bike more, support renewable energy, and share information.</p>
+          <div style="margin-top:12px;display:flex;gap:8px">
+            <a href="#solutions" class="cta">See Solutions</a>
+            <a href="#act" style="align-self:center;color:var(--muted);text-decoration:none">More resources →</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <main>
+      <div>
+        <section id="problem" class="card">
+          <div class="section-title"><div class="kicker">Problem</div></div>
+          <h3>The scope of environmental damage</h3>
+          <p class="text">Ecosystems around the world are suffering from deforestation, water and soil pollution, greenhouse gas emissions, and habitat loss. These processes not only destroy species but also cause droughts, floods, and food crises in vulnerable communities.</p>
+        </section>
+
+        <section id="causes" class="card" style="margin-top:14px">
+          <div class="section-title"><div class="kicker">Causes</div></div>
+          <div class="cards-grid">
+            <div class="sol-item">
+              <h4>Deforestation</h4>
+              <p class="text">Agricultural expansion, illegal logging, and mining reduce forests that are essential for climate regulation.</p>
+            </div>
+            <div class="sol-item">
+              <h4>Pollution</h4>
+              <p class="text">Chemical waste, plastics, and industrial residues harm rivers, soils, and food chains.</p>
+            </div>
+            <div class="sol-item">
+              <h4>Emissions</h4>
+              <p class="text">Burning fossil fuels increases greenhouse gases that trap heat in the atmosphere.</p>
+            </div>
+            <div class="sol-item">
+              <h4>Overexploitation</h4>
+              <p class="text">Excessive fishing and extraction reduce populations of key species.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="effects" class="card" style="margin-top:14px">
+          <div class="section-title"><div class="kicker">Effects</div></div>
+          <ul class="text">
+            <li>Loss of biodiversity and extinction of species.</li>
+            <li>Climate changes: heat waves, floods, and extreme weather patterns.</li>
+            <li>Human health issues due to air and water pollution.</li>
+            <li>Economic impacts on agriculture, fishing, and tourism.</li>
+          </ul>
+        </section>
+
+        <section id="solutions" class="card" style="margin-top:14px">
+          <div class="section-title"><div class="kicker">Solutions</div></div>
+          <div class="cards-grid">
+            <div class="sol-item">
+              <h4>Public Policies</h4>
+              <p class="text">Strict regulations, clean energy incentives, and protection of natural areas.</p>
+            </div>
+            <div class="sol-item">
+              <h4>Technology</h4>
+              <p class="text">Renewable energies, regenerative agriculture, and smart waste management.</p>
+            </div>
+            <div class="sol-item">
+              <h4>Circular Economy</h4>
+              <p class="text">Designing products to last, recycle, and reuse materials efficiently.</p>
+            </div>
+            <div class="sol-item">
+              <h4>Education</h4>
+              <p class="text">Teaching communities sustainable practices and raising awareness among companies and governments.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="act" class="card" style="margin-top:14px">
+          <div class="section-title"><div class="kicker">Take Action</div></div>
+          <h3>Practical actions you can start today</h3>
+          <ol class="text">
+            <li>Reduce single-use plastic consumption.</li>
+            <li>Use a bike or public transport whenever possible.</li>
+            <li>Buy local and seasonal products to reduce your footprint.</li>
+            <li>Support organizations protecting local ecosystems.</li>
+            <li>Stay informed and share — information multiplies impact.</li>
+          </ol>
+        </section>
+      </div>
+
+      <aside class="right-col">
+        <div class="card">
+          <h4>Quick Resources</h4>
+          <ul style="margin-top:10px;color:var(--muted);font-size:14px;line-height:1.6">
+            <li>Responsible consumption guides</li>
+            <li>Protected area maps</li>
+            <li>Local recycling initiatives</li>
+          </ul>
+          <div style="margin-top:14px">
+            <h4 style="margin:0">Contact</h4>
+            <p class="text" style="margin-top:8px">Want this content on your website or a PDF version? Contact me.</p>
+          </div>
+        </div>
+
+        <div style="height:18px"></div>
+
+        <div class="card">
+          <h4 style="margin:0">Did you know?</h4>
+          <p class="text" style="margin-top:8px">If emissions were drastically reduced, many regions could experience climate benefits within decades — but action must start now.</p>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <div>© 2025 — Educational page on environmental damage</div>
+      <div>Modern design • Sectioned • Clean interface</div>
+    </footer>
+  </div>
+
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click', e=>{
+      e.preventDefault(); const t=document.querySelector(a.getAttribute('href'));
+      if(t) t.scrollIntoView({behavior:'smooth',block:'start'});
+    }));
+  </script>
+</body>
+</html>
